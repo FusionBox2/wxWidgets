@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <wxVersionString>2812</wxVersionString>
+    <wxShortVersionString>28</wxShortVersionString>
+    <wxToolkitPrefix>msw</wxToolkitPrefix>
+    <wxCompilerPrefix>vc</wxCompilerPrefix>
+    <wxCfg>
+    </wxCfg>
+    <wxVendor>custom</wxVendor>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Platform)'=='Win32'">
+    <wxArchSuffix>
+    </wxArchSuffix>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Platform)'=='x64'">
+    <wxArchSuffix>_x64</wxArchSuffix>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Platform)'=='Itanium'">
+    <wxArchSuffix>_ia64</wxArchSuffix>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'=='Unicode Debug' or '$(Configuration)'=='DLL Unicode Debug'">
+    <wxSuffix>ud</wxSuffix>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'=='Debug' or '$(Configuration)'=='DLL Debug'">
+    <wxSuffix>d</wxSuffix>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'=='Unicode Release' or '$(Configuration)'=='DLL Unicode Release'">
+    <wxSuffix>u</wxSuffix>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'=='Release' or '$(Configuration)'=='DLL Release'">
+    <wxSuffix>
+    </wxSuffix>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'=='Universal Unicode Debug' or '$(Configuration)'=='DLL Universal Unicode Debug'">
+    <wxSuffix>univud</wxSuffix>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'=='Universal Debug' or '$(Configuration)'=='DLL Universal Debug'">
+    <wxSuffix>univd</wxSuffix>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'=='Universal Unicode Release' or '$(Configuration)'=='DLL Universal Unicode Release'">
+    <wxSuffix>univu</wxSuffix>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'=='Universal Release' or '$(Configuration)'=='DLL Universal Release'">
+    <wxSuffix>univ</wxSuffix>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'=='Debug' or '$(Configuration)'=='DLL Debug' or '$(Configuration)'=='Unicode Debug' or '$(Configuration)'=='DLL Unicode Debug'">
+    <wxSuffixDebug>d</wxSuffixDebug>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'!='Debug' and '$(Configuration)'!='DLL Debug' and '$(Configuration)'!='Unicode Debug' and '$(Configuration)'!='DLL Unicode Debug'">
+    <wxSuffixDebug>
+    </wxSuffixDebug>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'=='Debug' or '$(Configuration)'=='DLL Debug' or '$(Configuration)'=='Unicode Debug' or '$(Configuration)'=='DLL Unicode Debug' or '$(Configuration)'=='Universal Debug' or '$(Configuration)'=='DLL Universal Debug' or '$(Configuration)'=='Universal Unicode Debug' or '$(Configuration)'=='DLL Universal Unicode Debug'">
+    <wxSuffixDebug>d</wxSuffixDebug>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'!='Debug' and '$(Configuration)'!='DLL Debug' and '$(Configuration)'!='Unicode Debug' and '$(Configuration)'!='DLL Unicode Debug' and '$(Configuration)'!='Universal Debug' and '$(Configuration)'!='DLL Universal Debug' and '$(Configuration)'!='Universal Unicode Debug' and '$(Configuration)'!='DLL Universal Unicode Debug'">
+    <wxSuffixDebug>
+    </wxSuffixDebug>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'=='DLL Debug' or '$(Configuration)'=='DLL Release' or '$(Configuration)'=='DLL Unicode Debug' or '$(Configuration)'=='DLL Unicode Release' or '$(Configuration)'=='DLL Universal Debug' or '$(Configuration)'=='DLL Universal Release' or '$(Configuration)'=='DLL Universal Unicode Debug' or '$(Configuration)'=='DLL Universal Unicode Release'">
+    <wxLibTypeSuffix>dll</wxLibTypeSuffix>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'!='DLL Debug' and '$(Configuration)'!='DLL Release' and '$(Configuration)'!='DLL Unicode Debug' and '$(Configuration)'!='DLL Unicode Release' and '$(Configuration)'!='DLL Universal Debug' and '$(Configuration)'!='DLL Universal Release' and '$(Configuration)'!='DLL Universal Unicode Debug' and '$(Configuration)'!='DLL Universal Unicode Release'">
+    <wxLibTypeSuffix>lib</wxLibTypeSuffix>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros">
+    <wxOutDirName>$(wxCompilerPrefix)$(wxArchSuffix)_$(wxLibTypeSuffix)$(wxCfg)</wxOutDirName>
+    <wxOutDir>..\..\lib\$(wxOutDirName)\</wxOutDir>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'=='DLL Debug' or '$(Configuration)'=='DLL Unicode Debug' or '$(Configuration)'=='DLL Universal Debug' or '$(Configuration)'=='DLL Universal Unicode Debug'">
+    <wxIntRootDir>$(wxCompilerPrefix)$(wxArchSuffix)_$(wxToolkitPrefix)$(wxSuffix)dll\</wxIntRootDir>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'=='DLL Release' or '$(Configuration)'=='DLL Unicode Release' or '$(Configuration)'=='DLL Universal Release' or '$(Configuration)'=='DLL Universal Unicode Release'">
+    <wxIntRootDir>$(wxCompilerPrefix)$(wxArchSuffix)_$(wxToolkitPrefix)$(wxSuffix)dll\</wxIntRootDir>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'=='Debug' or '$(Configuration)'=='Unicode Debug' or '$(Configuration)'=='Universal Debug' or '$(Configuration)'=='Universal Unicode Debug'">
+    <wxIntRootDir>$(wxCompilerPrefix)$(wxArchSuffix)_$(wxToolkitPrefix)$(wxSuffix)\</wxIntRootDir>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Configuration)'=='Release' or '$(Configuration)'=='Unicode Release' or '$(Configuration)'=='Universal Release' or '$(Configuration)'=='Universal Unicode Release'">
+    <wxIntRootDir>$(wxCompilerPrefix)$(wxArchSuffix)_$(wxToolkitPrefix)$(wxSuffix)\</wxIntRootDir>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros">
+    <wxIncSubDir>$(wxToolkitPrefix)$(wxSuffix)</wxIncSubDir>
+    <wxToolkitDllNamePrefix>wx$(wxToolkitPrefix)$(wxVersionString)$(wxSuffix)_</wxToolkitDllNamePrefix>
+    <wxToolkitDllNameSuffix>_$(wxCompilerPrefix)$(wxArchSuffix)_$(wxVendor)</wxToolkitDllNameSuffix>
+    <wxToolkitLibNamePrefix>wx$(wxToolkitPrefix)$(wxShortVersionString)$(wxSuffix)_</wxToolkitLibNamePrefix>
+    <wxBaseDllNamePrefix>wxbase$(wxVersionString)$(wxSuffix)</wxBaseDllNamePrefix>
+    <wxBaseLibNamePrefix>wxbase$(wxShortVersionString)$(wxSuffix)</wxBaseLibNamePrefix>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalOptions Condition="'$(PlatformToolset)' == 'v140_xp'">/Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;winspool.lib;shell32.lib;shlwapi.lib;ole32.lib;oleaut32.lib;uuid.lib;advapi32.lib;version.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;wininet.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="wxShortVersionString">
+      <Value>$(wxShortVersionString)</Value>
+    </BuildMacro>
+    <BuildMacro Include="wxArchSuffix">
+      <Value>$(wxArchSuffix)</Value>
+    </BuildMacro>
+    <BuildMacro Include="wxToolkitPrefix">
+      <Value>$(wxToolkitPrefix)</Value>
+    </BuildMacro>
+    <BuildMacro Include="wxCompilerPrefix">
+      <Value>$(wxCompilerPrefix)</Value>
+    </BuildMacro>
+    <BuildMacro Include="wxCfg">
+      <Value>$(wxCfg)</Value>
+    </BuildMacro>
+    <BuildMacro Include="wxVendor">
+      <Value>$(wxVendor)</Value>
+    </BuildMacro>
+    <BuildMacro Include="wxOutDir">
+      <Value>$(wxOutDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="wxOutDirName">
+      <Value>$(wxOutDirName)</Value>
+    </BuildMacro>
+    <BuildMacro Include="wxIntRootDir">
+      <Value>$(wxIntRootDir)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
