@@ -763,7 +763,7 @@ bool wxMDIChildFrame::Create(wxMDIParentFrame *parent,
   wxWindowCreationHook hook(this);
 
   m_hWnd = (WXHWND)::SendMessage(GetWinHwnd(parent->GetClientWindow()),
-                                 WM_MDICREATE, 0, (LONG)(LPSTR)&mcs);
+                                 WM_MDICREATE, 0, (LPARAM)(LPSTR)&mcs);
 
   if ( !m_hWnd )
   {
