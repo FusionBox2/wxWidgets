@@ -122,7 +122,7 @@ if(WXGTK AND wxUSE_WEBVIEW_WEBKIT2)
 
     set(lib_rls)
     set(lib_dbg)
-    if(WIN32_MSVC_NAMING)
+    if(WIN32_MSVC_NAMING OR HAVE_MULTI_CONFIG_GENERATOR)
         set(lib_dbg "d")
     endif()
 
